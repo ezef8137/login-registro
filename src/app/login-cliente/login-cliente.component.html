@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/../login-tp/src/styles.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="/src/img/favicon.png" type="image/x-icon">
+  </head>
+  <body>
+    <main>
+        <article>
+          <section>
+            <button (click)="goBack()" class="btnVolver">Atrás</button>
+            <form [formGroup]="FormularioLogin" (ngSubmit)="iniciarSesion()">
+              <h1>Login</h1>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" formControlName="correo" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email</label>
+              </div>
+              <div class="form-floating">
+                <input type="password" formControlName="clave" class="form-control" id="floatingPassword" placeholder="Password">
+                <label for="floatingPassword">Contraseña</label>
+              </div>
+              <div style="text-align: center;">
+                <button class="btn" type="submit">Ingresar</button>
+              </div>
+              <div style="text-align: center;">
+                <a routerLink="/registro-cliente">¿Aun no te registraste?</a>
+              </div>
+            </form>
+          </section>
+        </article>
+    </main>
+  </body>
+</html>
